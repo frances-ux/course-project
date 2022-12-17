@@ -17,5 +17,86 @@
             </ul>
         </nav>
     </header>
+
+    <h1>CREATE NEW COMIC</h1>
+    <section>
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" placeholder="Title">
+    </section>
+    <br>
+    <section>
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author" placeholder="Author">
+    </section>
+    <br>
+    <div>  
+        <label for="publisher">Publisher</label>
+        <select name="publisher" id="publisher">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="boombox">BOOM! Box</option>
+            <option value="dccomics">DC Comics</option>
+            <option value="hna">Harry N. Abrams</option>
+            <option value="iconbooks">Icon Books</option>
+            <option value="imagecomics">Image Comics</option>
+            <option value="marvel">Marvel</option>
+            <option value="ss">Simon &amp; Schuster</option>
+            <option value="tsp">Top Shelf Productions</option>
+            <option value="vml">VIZ Media LLC</option>
+        </select>
+    </div>
+    <br>  
+    <section>
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" id="genre" placeholder="Genre">
+    </section>
+    <br>
+    <section>
+        <label for="pages">Number of pages:</label>
+        <input type="text" name="pages" id="pages" placeholder="Number of pages">
+    </section>
+    <br>
+    <section>
+        <label for="rating">Rating</label>
+        <input type="text" name="rating" id="rating" maxlength="4" size="4">
+    </section>
+    <br>
+    <section>
+        <label for="synopsis">Synopsis:</label>
+        <textarea id="synopsis" name="synopsis" rows="2" cols="20" placeholder="Synopsis"></textarea>
+    </section>
+    <br>
+    <input type="submit" value="Submit">
+
+
+
+    <footer>
+        <section>
+            <h3>VISIT US</h3>
+            <p>CodeSquad Comics <br> 123 Dorchester Avenue <br> Boston, MA 02124</p>
+        </section>
+        
+        <section>
+            <h3>LINKS</h3>
+            <a href="./index.html">Home</a> 
+            <br>
+            <a href="./about.html">About</a>
+            <br>
+            <a href="./login.html">Login</a>
+        </section>
+        
+        <section>
+            <h3>FOLLOW US</h3>
+            <a href="#">Facebook</a>
+            <br>
+            <a href="#">Instagram</a>
+            <br>
+            <a href="#">Twitter</a>
+        </section>
+        
+        <section>
+            <h3>A PRODUCT OF</h3>
+            <a href="http://codesquad.org/" target="_blank"><img src="./public/images/CodeSquad-logo-a.png" alt="CodeSquad logo with red and black text"></a>
+        </section>
+    </footer>
 </body>
 </html>
