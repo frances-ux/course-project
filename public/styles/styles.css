@@ -105,12 +105,16 @@ a:link {
     height: fit-content;
     background: var(--white);
     border-radius: 0px 0px 40px 40px;
-    padding: 2% 4%;
+    padding: 4%;
 }
 
 .card-info-titles {
     text-decoration: underline;
     font-weight: bold;
+    font-style: normal;
+    color: #063C5E;
 }
+
+
 
 
