@@ -1,0 +1,116 @@
+:root {
+    --white: #ffffff;
+    --blue: #063C5E; 
+    --yellow: #FCCF14;
+
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* navbar */
+.nav {
+    background-color: var(--blue);
+    padding: 20px;
+}
+
+.nav img {
+    width: 300px;
+    height: auto;
+}
+
+/* links */
+li {
+    list-style: none;
+    
+}
+
+a:link {
+    color: white;
+}
+
+
+/* footer */
+.footer {
+    background-color: var(--blue);
+    color: white;
+    padding: 20px 10px;
+    border-top: 5px solid var(--yellow);
+    margin-top: 20px;
+}
+
+.footer img {
+    width: 150px;
+    height: auto;
+}
+
+/* styling on homepage */
+.comic-cover {
+    width: 200px;
+    height: auto;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* styling on comic page */
+.card {
+    margin: 10vh auto;
+    width: 60%;
+    max-width: 60%;
+    border-radius: 40px;
+    background-size: cover;
+    border: var(--yellow) 5px solid;
+}
+
+.card-top {
+    width: 100%;
+    height: 100%;
+    border-bottom: var(--yellow) 5px solid;
+    border-radius: 36px 36px 0px 0px;
+    background-position: center center;
+    background-size: cover;
+    background-color: var(--blue);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--yellow);
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+
+.comic-card {
+    width: 400px;
+    height: 85vh;
+    background-image: url(../images/batman.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 40px;
+    border: var(--white) 5px solid;
+    margin: auto;
+}
+
+.card-bottom {
+    width: 100%;
+    height: fit-content;
+    background: var(--white);
+    border-radius: 0px 0px 40px 40px;
+    padding: 2% 4%;
+}
+
+.card-info-titles {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
