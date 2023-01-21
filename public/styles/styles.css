@@ -4,6 +4,7 @@
     --yellow: #FCCF14;
     --teal: #006B6B;
     --light-teal: #009E9E;
+    --black: #000000;
 
 
 }
@@ -172,18 +173,16 @@ footer a:active {
     color: #063C5E;
 }
 
-
 .yellow {
     color: var(--yellow);
 }
 
+.centered-text {
+    text-align: center;
+}
 .title {
     text-align: center;
     color: var(--blue);
-}
-
-.centered-text {
-    text-align: center;
 }
 
 /* containers */
@@ -194,8 +193,6 @@ footer a:active {
     padding: 3% 2.75%;
     border: 4px solid var(--blue);
     background-color: var(--white);
-    
-
 }
 
 .about-content {
@@ -271,6 +268,44 @@ font-size: 1.4rem;
     margin-left: 20%;
 }
 
+.cc-container {
+    max-width: 80%;
+    margin: 4% auto;
+    border: 4px solid var(--blue);
+    background-color: var(--white);
+}
+
+.cc-content {
+    display: inline-block;
+    margin: auto;
+    text-align: left;
+    padding: 4%;
+    font-size: 1.4rem;
+}
+
+.ccc-container {
+    max-width: 80%;
+    margin: 4% auto;
+    border: 4px solid var(--blue);
+    background-color: var(--white);
+}
+
+.ccc-content {
+    margin: auto;
+    text-align: left;
+    padding: 4%;
+    font-size: 1.4rem;
+}
+
+.ccc-content a:link {
+    color: var(--black);
+    text-decoration: underline;
+}
+
+.ccc-content a:visited {
+    color: #551A8B;
+}
+
 
 
 
@@ -318,7 +353,12 @@ input[type=submit] {
     text-align: center;
 }
 
-.blue-button {
-
+input[type=button] {
+    background-color: var(--yellow);
+    color: var(--blue);
+    width: 11vw;
+    margin: 2% 0;
+    text-align: center;
 }
+
 
