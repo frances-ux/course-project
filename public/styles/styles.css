@@ -20,10 +20,12 @@ body {
     background-image: linear-gradient(to top, var(--teal) 0%, var(--light-teal), var(--white) 100%);
 }
 
+
 /* navbar */
 .nav {
     background-color: var(--blue);
     padding: 0.5%;
+    font-size: 1.4rem;
 }
 
 .nav img {
@@ -69,6 +71,7 @@ footer {
     color: white;
     border-top: 5px solid var(--yellow);
     text-align: left;
+    font-size: 1.4rem;
 }
 
 footer img {
@@ -198,6 +201,7 @@ footer a:active {
 .about-content {
 background-color: var(--white);
 max-width: auto;
+font-size: 1.4rem;
 }
 
 .about-paragraph {
@@ -225,6 +229,30 @@ max-width: auto;
     text-align: center;
     margin-left: 20%;
 }
+
+.create-container {
+    max-width: 80%;
+    margin: 4% auto;
+    border: 4px solid var(--blue);
+    background-color: var(--white);
+    text-align: center;
+
+}
+
+.create-content {
+    display: inline-block;
+    margin: auto;
+    text-align: end;
+    padding: 4%;
+}
+
+.create-content input[type=submit] {
+    text-align: center;
+    margin-left: 20%;
+}
+
+
+
 
 /* form elements */
 
