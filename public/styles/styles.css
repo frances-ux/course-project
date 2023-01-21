@@ -251,6 +251,26 @@ font-size: 1.4rem;
     margin-left: 20%;
 }
 
+.login-container {
+    max-width: 80%;
+    margin: 4% auto;
+    border: 4px solid var(--blue);
+    background-color: var(--white);
+    text-align: center;
+}
+
+.login-content {
+    display: inline-block;
+    margin: auto;
+    text-align: end;
+    padding: 4%;
+}
+
+.login-content input[type=submit] {
+    text-align: center;
+    margin-left: 20%;
+}
+
 
 
 
