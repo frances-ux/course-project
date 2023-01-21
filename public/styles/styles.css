@@ -2,6 +2,8 @@
     --white: #ffffff;
     --blue: #063C5E; 
     --yellow: #FCCF14;
+    --teal: #006B6B;
+    --light-teal: #009E9E;
 
 
 }
@@ -15,6 +17,7 @@ body {
     max-width: 100vw;
     margin: 0;
     overflow-x: hidden;
+    background-image: linear-gradient(to top, var(--teal) 0%, var(--light-teal), var(--white) 100%);
 }
 
 /* navbar */
@@ -47,6 +50,18 @@ a:link {
 a:visited {
     color: var(--white);
 }
+
+a:hover {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+a:active {
+    color: var(--blue);
+    font-weight: bold;
+    background-color: var(--yellow);
+}
+
 
 /* footer */
 footer {
@@ -146,9 +161,13 @@ footer a:visited{
     color: var(--yellow);
 }
 
-.centered-title {
+.title {
     text-align: center;
     color: var(--blue);
+}
+
+.centered-text {
+    text-align: center;
 }
 
 /* containers */
@@ -168,3 +187,74 @@ max-width: auto;
 padding: 35px;
 
 }
+
+.update-container {
+    max-width: 80%;
+    margin: 4% auto;
+    border: 4px solid var(--blue);
+    background-color: var(--white);
+    text-align: center; 
+    
+}
+
+.update-content {
+    display: inline-block;
+    margin: auto;
+    text-align: end;
+    padding: 4%;
+
+}
+
+.update-content input[type=submit] {
+    text-align: center;
+    margin-left: 20%;
+}
+
+/* form elements */
+
+input, select, textarea {
+    padding: 0.5%;
+    width: 20vw;
+}
+
+textarea {
+    height: 15vh;
+    resize: none;
+}
+
+form div {
+    padding: 2%;
+}
+
+form {
+    display: inline-block;
+    max-width: 100%;
+    width: 40vw;
+    margin-right: 10vw;
+    
+}
+
+label[for=synopsis] {
+    vertical-align: top;
+}
+
+label {
+    font-size: 1.4rem;
+}
+
+
+
+/* buttons */
+
+input[type=submit] {
+    background-color: var(--yellow);
+    color: var(--blue);
+    width: 5vw;
+    margin: auto;
+    text-align: center;
+}
+
+.blue-button {
+
+}
+
