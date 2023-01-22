@@ -5,8 +5,7 @@
     --teal: #006B6B;
     --light-teal: #009E9E;
     --black: #000000;
-
-
+    --grey: #C2C2C2;
 }
 
 * {
@@ -306,6 +305,42 @@ font-size: 1.4rem;
     color: #551A8B;
 }
 
+.admin-container {
+    max-width: 80%;
+    margin: 4% auto;
+    border: 4px solid var(--blue);
+    background-color: var(--white);
+}
+
+.admin-content {
+    margin: auto;
+    padding: 4%;
+    font-size: 1.4rem;
+}
+
+/* table */
+
+.comics {
+    margin: 5% auto;
+    width: 100%;
+    padding: 2%;
+    border-collapse: collapse;
+
+}
+
+.comics tr:nth-child(even) {
+    background-color: var(--grey);
+}
+
+.comics thead {
+    background-color: var(--grey);
+}
+
+th, td {
+    padding: 1%;
+    border: var(--blue) solid 2px;
+}
+
 
 
 
@@ -348,17 +383,36 @@ label {
 input[type=submit] {
     background-color: var(--yellow);
     color: var(--blue);
-    width: 5vw;
-    margin: auto;
+    width: fit-content;
+    margin: 0 auto;
     text-align: center;
+    padding: 1%;
 }
 
 input[type=button] {
     background-color: var(--yellow);
     color: var(--blue);
-    width: 11vw;
-    margin: 2% 0;
+    width: fit-content;
+    margin: 0 auto;
     text-align: center;
 }
 
 
+tbody input[type=button] {
+    background-color: var(--yellow);
+    color: var(--blue);
+    width: 100%;
+    margin: 2% 0;
+    text-align: center;
+    padding: 2%;
+}
+
+.edit-button {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.comic input[type=button] {
+    margin-left: 43%;
+
+}
