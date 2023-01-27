@@ -207,6 +207,10 @@ footer a:active {
     color: var(--blue);
 }
 
+.italic2 {
+    font-style: italic;
+}
+
 /* containers */
 
 .about-container {
