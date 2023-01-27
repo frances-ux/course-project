@@ -18,6 +18,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     background-image: linear-gradient(to top, var(--teal) 0%, var(--light-teal), var(--white) 100%);
+    font-size: 1.4rem;
 }
 
 
@@ -124,6 +125,14 @@ footer a:active {
     font-style: italic;
 }
 
+.align-comics {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
 /* styling on comic page */
 .card {
     margin: 10vh auto;
@@ -195,6 +204,14 @@ footer a:active {
     padding: 3% 2.75%;
     border: 4px solid var(--blue);
     background-color: var(--white);
+}
+
+.center-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    margin: auto;
 }
 
 .about-content {
@@ -297,6 +314,9 @@ font-size: 1.4rem;
     text-align: left;
     padding: 4%;
     font-size: 1.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .ccc-content a:link {
@@ -366,7 +386,6 @@ form {
     max-width: 100%;
     width: 40vw;
     margin-right: 10vw;
-    
 }
 
 label[for=synopsis] {
@@ -376,8 +395,6 @@ label[for=synopsis] {
 label {
     font-size: 1.4rem;
 }
-
-
 
 /* buttons */
 
@@ -393,30 +410,32 @@ input[type=submit] {
 input[type=button] {
     background-color: var(--yellow);
     color: var(--blue);
-    width: fit-content;
-    margin: 0 auto;
+    width: 150px;
+    height: auto;
+    margin: auto;
     text-align: center;
-}
-
-
-tbody input[type=button] {
-    background-color: var(--yellow);
-    color: var(--blue);
-    width: 100%;
-    margin: 2% 0;
-    text-align: center;
-    padding: 2%;
+    display: block;
 }
 
 input[type=button][value=EDIT] {
     background-color: var(--blue);
     color: var(--white);
     width: 100%;
+    padding: 0.25rem 0;
 }
 
-
+input[type=button][value=DELETE] {
+    background-color: var(--yellow);
+    color: var(--blue);
+    width: 80px;
+    padding: 0.25rem 0;
+}
 
 .comic input[type=button] {
-    margin-left: 43%;
+    margin: auto;
+    display: block;
+    width: fit-content;
 
 }
+
+
