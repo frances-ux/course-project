@@ -420,7 +420,7 @@ input[type=button] {
 input[type=button][value=EDIT] {
     background-color: var(--blue);
     color: var(--white);
-    width: 100%;
+    width: 80px;
     padding: 0.25rem 0;
 }
 
