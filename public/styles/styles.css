@@ -123,6 +123,17 @@ footer a:active {
 
 .italic {
     font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.center-words { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .align-comics {
@@ -320,12 +331,23 @@ font-size: 1.4rem;
 }
 
 .ccc-content a:link {
-    color: var(--black);
-    text-decoration: underline;
+    color: var(--blue);
+    text-decoration: none;
 }
 
 .ccc-content a:visited {
-    color: #551A8B;
+    color: var(--blue);
+}
+
+.ccc-content a:hover {
+    color: var(--teal);
+    font-weight: bold;
+}
+
+.ccc-content a:active {
+    color: var(--blue);
+    font-weight: bold;
+    background-color: var(--yellow);
 }
 
 .admin-container {
@@ -410,21 +432,26 @@ input[type=submit] {
 input[type=button] {
     background-color: var(--yellow);
     color: var(--blue);
-    width: 150px;
+    width: fit-content;
     height: auto;
     margin: auto;
     text-align: center;
     display: block;
+    padding: 0.25rem 0.25rem;
 }
 
-input[type=button][value=EDIT] {
+.ccc-container input[type=button][value="DISPLAY MORE"] {
+    margin-bottom: 3rem;
+}
+
+input[type=button][value="EDIT"] {
     background-color: var(--blue);
     color: var(--white);
     width: 80px;
     padding: 0.25rem 0;
 }
 
-input[type=button][value=DELETE] {
+input[type=button][value="DELETE"] {
     background-color: var(--yellow);
     color: var(--blue);
     width: 80px;
@@ -435,7 +462,7 @@ input[type=button][value=DELETE] {
     margin: auto;
     display: block;
     width: fit-content;
-
+    padding: 0.25rem 0.25rem;
 }
 
 
