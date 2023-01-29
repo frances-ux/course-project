@@ -391,7 +391,6 @@ font-size: 1.4rem;
     width: 100%;
     padding: 2%;
     border-collapse: collapse;
-
 }
 
 .comics tr:nth-child(even) {
@@ -405,8 +404,8 @@ font-size: 1.4rem;
 th, td {
     padding: 1%;
     border: var(--blue) solid 2px;
+    max-width: 100%;
 }
-
 
 /* form elements */
 
@@ -487,4 +486,7 @@ input[type=button][value="DELETE"] {
     padding: 0.25rem 0.25rem;
 }
 
-
+tr input[type=button] {
+    box-sizing: border-box;
+    max-width: 100%;
+}
