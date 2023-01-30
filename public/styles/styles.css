@@ -25,6 +25,10 @@ body {
     font-family: var(--body-fonts);
 }
 
+.hidden {
+    display: none;
+}
+
 h1, h2, h3 {
     font-family: var(--headers);
 }
@@ -490,3 +494,13 @@ tr input[type=button] {
     box-sizing: border-box;
     max-width: 100%;
 }
+
+/* media queries */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    header ul {
+        display: hidden;
+
+    }
+    
+}
+
