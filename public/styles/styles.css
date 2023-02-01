@@ -428,7 +428,8 @@ form div {
 }
 
 form {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
     width: 40vw;
     margin-right: 10vw;
@@ -440,7 +441,7 @@ label[for=synopsis] {
 }
 
 label {
-    font-size: 1.4rem;
+    font-size: 0.85em;
 }
 
 /* buttons */
@@ -523,11 +524,9 @@ a.menu-icon {
         text-align: left;
         font-size: 1.4rem;
         font-family: var(--headers);
+        padding-left: 10vw;
+
     }
-
-
-
-
 
 }
 
