@@ -38,23 +38,33 @@ h1, h2, h3 {
 .nav {
     background-color: var(--blue);
     padding: 0.5%;
-    font-size: 1.4rem;
+    font-size: 0.9em;
     font-family: var(--headers);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav img {
-    width: 300px;
-    height: auto;
-    padding-bottom: 2%;
-}
+
 
 .inline-nav {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: end;
-    padding: 0% 3%;
+    justify-content: end space-evenly;
+    align-items: center;
     list-style: none;
+    width: 50%; 
+}
+
+li.inline-nav {
+    padding-right: 2rem;
+}
+
+img.codesquad-logo {
+    width: 70%;
+    max-width: 100%;
+    padding: 2rem;
 }
 
 /* links */
@@ -166,7 +176,7 @@ footer a:active {
 /* styling on comic page */
 .card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 10vh auto;
     width: 90%;
     max-width: 100%;
@@ -177,8 +187,8 @@ footer a:active {
 }
 
 .card-top {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     border-bottom: var(--yellow) 5px solid;
     border-radius: 35px 35px 0px 0px;
     background-position: center center;
@@ -191,18 +201,12 @@ footer a:active {
     padding-top: 3%;
 }
 
-.comic-card {
-    width: 60%;
-    max-width: 100%;
-    height: 40vh;
-    max-height: 70%;
-    background-image: url(../images/batman.jpg);
-    background-position: center;
-    background-size: cover;
+.comic-picture {
+    width: 70%;
+    height: auto;
     border-radius: 40px;
     border: var(--white) 5px solid;
-    margin: auto;
-    margin-bottom: 1.5em;
+    margin: 12px;
 }
 
 .card-bottom {
@@ -504,18 +508,18 @@ tr input[type=button] {
 
 /* menu icon */
 a.menu-icon {
-    display: block;
+    display: none;
     color: var(--white);
-    position: absolute;
-    right: 0;
-    top: 0;
     padding: 1rem 1rem;
 }
 
+
 /* media queries */
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     ul.inline-nav li a {
         display: none;
+        justify-content: center;
+        align-items: center;
     }
 
     footer.make-it {
@@ -534,29 +538,49 @@ a.menu-icon {
 
     }
 
+        a.menu-icon {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            color: var(--white);
+            padding: 1rem 1rem;
+        }
+
+        .card {
+            flex-direction: column;
+        }
+
+        img.codesquad-logo {
+            width: 80%;
+            height: auto;
+            padding: 1rem;
+        }
+
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024) {
-    .comic-card {
-        width: 100%;
-        max-width: 100%;
-        height: 1000vh;
-        max-height: 100%;
-        background-image: url(../images/batman.jpg);
-        background-position: center;
-        background-size: cover;
-        border-radius: 40px;
-        border: var(--white) 5px solid;
-        margin: auto;
-        margin-bottom: 1.5em;
-}
+
+    img.codesquad-logo {
+        width: 80%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .nav {
+        font-size: 0.9em;
+    }
+
+
 
 
 }
 
 @media screen and (min-width: 1024) {
-    a.menu-icon {
-        display: none;
+
+    img.codesquad-logo {
+        width: 40%;
+        padding: 2rem;
     }
 
 }
