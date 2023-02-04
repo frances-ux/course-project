@@ -402,6 +402,7 @@ font-size: 1.4rem;
     width: 100%;
     padding: 2%;
     border-collapse: collapse;
+    overflow-x: auto;
 }
 
 .comics tr:nth-child(even) {
@@ -442,6 +443,7 @@ form {
     width: 40vw;
     margin-right: 10vw;
     margin-bottom: 5vh;
+    font-size: 0.8em;
 }
 
 label[for=synopsis] {
@@ -571,22 +573,6 @@ a.menu-icon {
         display: none;
         justify-content: center;
         align-items: center;
-    }
-
-    footer.make-it {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 2% 0 5% 0;
-        background-color: var(--blue);
-        color: var(--white);
-        border-top: 5px solid var(--yellow);
-        text-align: left;
-        font-size: 1.4rem;
-        font-family: var(--headers);
-        padding-left: 10vw;
-
     }
 
     a.menu-icon {
