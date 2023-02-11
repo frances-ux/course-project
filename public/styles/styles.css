@@ -515,6 +515,7 @@ a.menu-icon {
 
 
 /* media queries */
+/* mobile */
 @media screen and (max-width: 768px) {
     ul.inline-nav li a {
         display: none;
@@ -564,10 +565,15 @@ a.menu-icon {
             padding: 1rem;
         }
 
+        .wrapper {
+            overflow-x: auto;
+        }
+
 
 
 }
 
+/* tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     ul.inline-nav li a {
         display: none;
@@ -606,7 +612,7 @@ a.menu-icon {
 
 
 }
-
+/* desktop */
 @media screen and (min-width: 1024px) {
 
     img.codesquad-logo {
