@@ -48,6 +48,8 @@ h1, h2, h3 {
 
 
 
+
+
 .inline-nav {
     display: flex;
     flex-direction: row;
@@ -107,6 +109,7 @@ footer ul{
 footer li{
     text-align: left;
 }
+
 footer a:visited{
     color: white;
 }
@@ -391,8 +394,8 @@ font-size: 1.4rem;
 
 .admin-content {
     margin: auto;
+    margin-top: 5%;
     padding: 4%;
-    font-size: 1.4rem;
 }
 
 /* table */
