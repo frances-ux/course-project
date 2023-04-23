@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" type= "text/css" href="./public/styles/styles.css">
-    <script src="https://kit.fontawesome.com/07c2827be3.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <nav class="nav">
-            <a href="./index.html"><img src="./public/images/CodeSquad-Comics-logo.png" class="codesquad-logo" alt="blue logo of codesquad comics with books image"></a>
-            
-                <ul class="inline-nav">
-                    <li class="inline-nav"><a href="./index.html">HOME</a></li>
-                    <li class="inline-nav"><a href="./about.html">ABOUT</a></li>
-                    <li class="inline-nav"><a href="./login.html">LOGIN</a></li>
-                </ul>
-                <a href="#" class="menu-icon"><i class="fa fa-bars"></i></a>
-        </nav>
-    </header>
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/nav') -%> 
+
     <div class="cc-container">
         <div class="cc-content">
             <h1 class="title centered-text">CODESQUAD COMICS</h1>
@@ -37,7 +15,7 @@
         <h2 class="title centered-text">COMPLETE COMIC COLLECTION</h2>
         <div class="ccc-content">
             <div class="align-comics">
-                <a href="#"><img class="comic-cover" src="./public/images/fun-home.jpg" alt="image of fun home bookcover with illustration of family"></a>
+                <a href="#"><img class="comic-cover" src="/images/fun-home.jpg" alt="image of fun home bookcover with illustration of family"></a>
                 <figcaption>
                     <span class="italic">Fun Home: A Family Tragicomic</span>
                     <span class="center-words">by Alison Bechdel</span> 
@@ -46,7 +24,7 @@
                 </figcaption>
             </div>
             <div class="align-comics">
-                <a href="#"><img class="comic-cover" src="./public/images/watchmen.jpg" alt="image of Watchmen comic book cover"></a>
+                <a href="#"><img class="comic-cover" src="/images/watchmen.jpg" alt="image of Watchmen comic book cover"></a>
                 <figcaption>
                     <span class="italic">Watchmen</span>
                     <span class="center-words">by Alan Moore</span> 
@@ -55,7 +33,7 @@
                 </figcaption>
             </div>
             <div class="align-comics">
-                <a href="#"><img class="comic-cover" src="./public/images/hunter-x-hunter.jpg" alt="Hunter X Hunter comic book cover"></a>
+                <a href="#"><img class="comic-cover" src="/images/hunter-x-hunter.jpg" alt="Hunter X Hunter comic book cover"></a>
                 <figcaption>
                     <span class="italic">Hunter X Hunter Vol. 1</span>
                     <span class="center-words">by Yoshihiro Togashi</span> 
@@ -64,7 +42,7 @@
                 </figcaption>
             </div>
             <div class="align-comics">
-                <a href="#"><img class="comic-cover" src="./public/images/lumberjanes.jpg" alt="Lumberjanes comic book cover"></a>
+                <a href="#"><img class="comic-cover" src="/images/lumberjanes.jpg" alt="Lumberjanes comic book cover"></a>
                 <figcaption>
                     <span class="italic">Lumberjanes Vol. 1</span>
                     <span class="center-words">by Noelle Stevenson</span> 
@@ -73,7 +51,7 @@
                 </figcaption>
             </div>
             <div class="align-comics">
-                <a href="#"><img class="comic-cover" src="./public/images/one-piece.jpg" alt="One Piece comic book cover"></a>
+                <a href="#"><img class="comic-cover" src="/images/one-piece.jpg" alt="One Piece comic book cover"></a>
                 <figcaption>
                     <span class="italic">One Piece, Vol. 1: Romance Dawn</span>
                     <span class="center-words">by Eiichiro Oda</span> 
@@ -82,7 +60,7 @@
                 </figcaption>
             </div>
             <div class="align-comics">
-                <a href="#"><img class="comic-cover" src="./public/images/wake.jpg" alt="Wake comic book cover"></a>
+                <a href="#"><img class="comic-cover" src="/images/wake.jpg" alt="Wake comic book cover"></a>
                 <figcaption>
                     <span class="italic">Wake: The Hidden History of Women-Led Slave Revolts</span>
                     <span class="center-words">by Rebecca Hall</span> 
@@ -91,7 +69,7 @@
                 </figcaption>
             </div>
             <div class="align-comics">
-                <a href="#"><img class="comic-cover" src="./public/images/black-panther.jpg" alt="Black Panther comic book cover"></a>
+                <a href="#"><img class="comic-cover" src="/images/black-panther.jpg" alt="Black Panther comic book cover"></a>
                 <figcaption>
                     <span class="italic">Black Panther: A Nation Under Our Feet Book 1</span>
                     <span class="center-words">by Ta-Nehisi Coates</span> 
@@ -100,7 +78,7 @@
                 </figcaption>
             </div>
             <div class="align-comics">
-                <a href="#"><img class="comic-cover" src="./public/images/the-walking-dead.jpg" alt="Walking Dead comic book cover"></a>
+                <a href="#"><img class="comic-cover" src="/images/the-walking-dead.jpg" alt="Walking Dead comic book cover"></a>
                 <figcaption>
                     <span class="italic">The Walking Dead, Vol. 1: Days Gone Bye</span>
                     <span class="center-words">by Robert Kirkman</span> 
@@ -109,7 +87,7 @@
                 </figcaption>
             </div>
             <div class="align-comics">
-                <a href="#"><img class="comic-cover" src="./public/images/march.jpg" alt="March comic book cover"></a>
+                <a href="#"><img class="comic-cover" src="/images/march.jpg" alt="March comic book cover"></a>
                 <figcaption>
                     <span class="italic">March: Book One</span>
                     <span class="center-words">by John Lewis</span> 
@@ -118,7 +96,7 @@
                 </figcaption>
             </div>
             <div class="align-comics">
-                <a href="./batman.html"><img class="comic-cover" src="./public/images/batman.jpg" alt="Batman comic book cover"></a>
+                <a href="./batman.html"><img class="comic-cover" src="/images/batman.jpg" alt="Batman comic book cover"></a>
                 <figcaption>
                     <span class="italic">Batman: The Dark Knight Returns</span>
                     <span class="center-words">by Frank Miller</span> 
@@ -127,7 +105,7 @@
                 </figcaption>
             </div>
             <div class="align-comics">
-                <a href="#"><img class="comic-cover" src="./public/images/queer.jpg" alt="Queer comic book cover"></a>
+                <a href="#"><img class="comic-cover" src="/images/queer.jpg" alt="Queer comic book cover"></a>
                 <figcaption>
                     <span class="italic">Queer: A Graphic History</span>
                     <span class="center-words">by Meg-John Barker</span> 
@@ -136,7 +114,7 @@
                 </figcaption>
             </div>
             <div class="align-comics">
-                <a href="#"><img class="comic-cover" src="./public/images/parable-of-the-sower.jpg" alt="Parable comic book cover"></a>
+                <a href="#"><img class="comic-cover" src="/images/parable-of-the-sower.jpg" alt="Parable comic book cover"></a>
                 <figcaption>
                     <span class="italic">Parable of the Sower</span>
                     <span class="center-words">Octavia E. Butler</span> 
@@ -150,47 +128,4 @@
         </div>
     </div>
 
-    <footer class="make-it">
-    
-        <!---section 1--->
-        <div>
-            <ul>
-                <li><h3 class="yellow">VISIT US</h3></li> 
-                <li>CodeSquad Comics</li>
-                <li>123 Dorchester Avenue </li>  
-                <li>Boston, MA 02124</li>
-            </ul>
-        </div> 
-        
-        <!---section 2--->
-        <div>
-            <ul>
-                <li><h3 class="yellow">LINKS</h3></li>
-                <li><a href="./index.html">Home</a></li> 
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./login.html">Login</a></li>
-            </ul>
-        </div> 
-        
-        <!---section 3--->
-        <div>
-            <ul>
-                <li><h3 class="yellow">FOLLOW US</h3></li>
-                <div class="follow">
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                </div>
-            </ul>
-        </div>
-        
-        <!---section 4--->
-        <div>
-            <ul>
-                <li><h3 class="yellow">A PRODUCT OF</h3></li>
-                <li><a href="http://codesquad.org/" target="_blank"><img src="./public/images/CodeSquad-logo-b.png" alt="CodeSquad logo with red and black text"></a></li> 
-            </ul>
-        </div>
-    </footer>
-</body>
-</html>
+<%- include('../partials/footer') -%>
