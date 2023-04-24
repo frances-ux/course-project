@@ -21,12 +21,12 @@ app.get('/login', (request, response) => {
 });
 
 //4. PATH: /admin-console, HANDLER: "This route points to the Admin Console page"
-app.get('/admin', (request, response) => {
+app.get('/admin-console', (request, response) => {
     response.send(`This route points to the Admin Console page`);
 });
 
 //5. PATH: /admin-console/create-book, HANDLER: "This route points to the Create page"
-app.get('/create', (request, response) => {
+app.get('/admin-console/create-book', (request, response) => {
     response.send(`This route points to the Create page`);
 });
 
