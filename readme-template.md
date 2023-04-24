@@ -1,5 +1,7 @@
 ## Project Name & Pitch
 
+CodeSquad Comics 
+
 #### Example:
 
 TweetWorld 

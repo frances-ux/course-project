@@ -456,6 +456,22 @@ label {
 
 /* buttons */
 
+.add-comic {
+        background-color: var(--yellow);
+        color: var(--blue);
+        width: fit-content;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        display: block;
+        padding: 0.25rem 0.25rem;
+        
+}
+
+.add-comic a:visited {
+    color: var(--blue);
+}
+
 input[type=submit] {
     background-color: var(--yellow);
     color: var(--blue);
