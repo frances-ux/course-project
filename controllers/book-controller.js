@@ -1,6 +1,5 @@
 const data = require('../data/data');
 
-
 module.exports = {
     book_detail: (request, response) => {
         let id = request.params._id;

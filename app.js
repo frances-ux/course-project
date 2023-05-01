@@ -1,11 +1,21 @@
 const express = require('express');
 const morgan = require('morgan'); 
-const app = express();
-const PORT = 3000;
-app.use(morgan('combined'));
 const path = require('path');
-app.use(express.static(path.join(__dirname, 'public')));
+const routes = require('./routes/index-routes');
+const app = express();
+const methodOverride = require('method-override');
+const { index } = require('./controllers/site-controller');
+const PORT = 3000;
+
 app.set('view engine', 'ejs');
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(morgan('combined'));
+app.use(routes);
+
 
 //1. PATH: /, HANDLER: "This route points to the Home page"
 // cut route and pasted in site-routes.js
