@@ -4,7 +4,6 @@ const path = require('path');
 const routes = require('./routes/index-routes');
 const app = express();
 const methodOverride = require('method-override');
-const { index } = require('./controllers/site-controller');
 const PORT = 3000;
 
 app.set('view engine', 'ejs');
@@ -14,7 +13,7 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan('combined'));
-app.use(routes);
+app.use('/', routes);
 
 
 //1. PATH: /, HANDLER: "This route points to the Home page"

@@ -22,3 +22,5 @@ router.route('/create-book')
 
 router.route('/update-book/:_id')
     .get(adminController.update_book);
+
+module.exports = router;

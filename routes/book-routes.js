@@ -7,6 +7,6 @@ const router = express.Router();
 // });
 
 router.route('/books/:_id')
-    .get(booksController.book_detail)
+    .get(booksController.book_detail);
 
 module.exports = router;

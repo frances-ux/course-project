@@ -4,18 +4,20 @@ const { v4: uuid } = require('uuid');
 module.exports = {
     admin: (request, response) => {
         response.render('pages/admin', {
-            inventoryArray: data
+            data: data
         });
     },
     create_book: (request, response) => {
         response.render('pages/create', {
+            data: data
         });
     },
     update_book: (request, response) => {
-        const { _id } = request.params;
-        const foundBook = data.find(book => book._id === _id);
+        let id = request.params._id;
+        const comic = data.find(book => book._id === String(id));
         response.render('pages/update', {
-            foundBook: foundBook
+            comic: comic
         });
     }
 }
+
