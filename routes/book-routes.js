@@ -6,7 +6,12 @@ const router = express.Router();
 //     response.render('pages/book', {});        
 // });
 
-router.route('/books/:_id')
-    .get(booksController.book_detail);
+router.route('/')
+    .post(booksController.create_book)
+
+router.route('/:_id')
+    .get(booksController.book_detail)
+    .put(booksController.update_book)
+    .delete(booksController.delete_book)
 
 module.exports = router;

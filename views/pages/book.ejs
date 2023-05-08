@@ -4,17 +4,17 @@
 
     <div class="card">
         <div class="card-top">
-            <h2 class="centered-text"><%= book.title %></h2>
-            <img src="/images/<%= book.image %>" alt="batman comic book cover" class="comic-picture">
+            <h2 class="centered-text"><%= comic.title %></h2>
+            <img src="/images/<%= comic.image %>" alt="comic book cover" class="comic-picture">
         </div>
         <div class="card-bottom">
             <section> 
-                <p class="italic2"><span class="card-info-titles">Title: </span><%= book.title %></p>
-                <p><span class="card-info-titles">Author: </span><%= book.author %></p>
-                <p><span class="card-info-titles">Publisher: </span><%= book.publisher %></p>
-                <p><span class="card-info-titles">Genre: </span><%= book.genre %></p>
-                <p><span class="card-info-titles">Number of pages: </span><%= book.pages %></p>
-                <p><span class="card-info-titles">Rating:</span><% for(let i = 0; i < book.rating; i++) {%>
+                <p class="italic2"><span class="card-info-titles">Title: </span><%= comic.title %></p>
+                <p><span class="card-info-titles">Author: </span><%= comic.author %></p>
+                <p><span class="card-info-titles">Publisher: </span><%= comic.publisher %></p>
+                <p><span class="card-info-titles">Genre: </span><%= comic.genre %></p>
+                <p><span class="card-info-titles">Number of pages: </span><%= comic.pages %></p>
+                <p><span class="card-info-titles">Rating:</span><% for(let i = 0; i < comic.rating; i++) {%>
                     <i class="fas fa-star"></i>
                 <% }%></p>
             </section>
@@ -23,7 +23,7 @@
                     <span class="card-info-titles">Synopsis:</span>
                 </p>
                 <p>
-                    <%= book.synopsis %>
+                    <%= comic.synopsis %>
                 </p>
             </section>
         </div>

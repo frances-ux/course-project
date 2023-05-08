@@ -14,9 +14,9 @@ module.exports = {
     },
     update_book: (request, response) => {
         let id = request.params._id;
-        const comic = data.find(book => book._id === String(id));
+        const data = data.find(book => book._id === String(id));
         response.render('pages/update', {
-            comic: comic
+            data: data
         });
     }
 }

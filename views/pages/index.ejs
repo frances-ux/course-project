@@ -15,8 +15,8 @@
         <div class="ccc-content">
             <div class="align-comics">
                 <!-- Using a for...of loop, loop through the data and display each book -->
-                <% for (let book of data) { %>
-                    <a href="/books/<%= book._id %>"><img class="comic-cover" src="/images/<%= book.image %>" alt="image of fun home bookcover with illustration of family"></a>
+                <% for (book of data) { %>
+                    <a href="/books/<%= book._id %>"><img class="comic-cover" src="/images/<%= book.image %>" alt="comic book image"></a>
                     <figcaption>
                         <span class="italic"><%= book.title %></span>
                         <span class="center-words">by <%= book.author %></span> 
