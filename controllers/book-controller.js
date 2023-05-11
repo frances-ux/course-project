@@ -13,25 +13,21 @@ module.exports = {
         console.log(request.body);
         const { _id = uuid(), image, title, author, publisher, genre, pages, rating, synopsis } = request.body;
         data.push({ _id, image, title, author, publisher, genre, pages, rating, synopsis });
-        if (title != "") {
-            response.redirect("/admin-console");
-        } else {
-            response.redirect("admin-console/create-book");
-        }
+        response.redirect("/admin-console");
     },
     update_book: (request, response) => {
-        const { _id } = request.params; 
+        const { _id } = request.params;
         const { image, title, author, publisher, genre, pages, rating, synopsis } = request.body;
         const comic = data.find(book => book._id === String(_id));
         comic.image = image;
         comic.title = title;
-        comic.author = author; 
+        comic.author = author;
         comic.publisher = publisher;
         comic.genre = genre;
         comic.pages = pages;
         comic.rating = rating;
         comic.synopsis = synopsis;
-        response.redirect("/admin-console/update-book");
+        response.redirect("/admin-console");
     },
     delete_book: (request, response) => {
         const { _id } = request.params;
