@@ -440,6 +440,7 @@ form {
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    /* changed width features */
     font-size: 0.8em;
 }
 
