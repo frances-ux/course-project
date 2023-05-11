@@ -14,6 +14,11 @@ module.exports = {
         const { _id = uuid(), image, title, author, publisher, genre, pages, rating, synopsis } = request.body;
         data.push({ _id, image, title, author, publisher, genre, pages, rating, synopsis });
         response.redirect("/admin-console");
+        // if (title != "") {
+        //     response.redirect("/admin-console");
+        // } else {
+        //     response.redirect("/admin-console/create-book");
+        // } 
     },
     update_book: (request, response) => {
         const { _id } = request.params;

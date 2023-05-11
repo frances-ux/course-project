@@ -168,7 +168,6 @@ footer a:active {
 .align-comics {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     width: 200px;
     flex-wrap: wrap;
     margin: 1rem;
@@ -209,7 +208,7 @@ footer a:active {
 
 .card-bottom {
     width: 100%;
-    height: fit-content;
+    height: auto;
     background: var(--white);
     border-radius: 0px 35px 35px 0px;
     padding: 4%;
