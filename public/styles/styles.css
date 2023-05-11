@@ -168,6 +168,7 @@ footer a:active {
 .align-comics {
     display: flex;
     flex-direction: column;
+    /* justify-content: space-between; */
     width: 200px;
     flex-wrap: wrap;
     margin: 1rem;

@@ -13,10 +13,11 @@
     <div class="ccc-container">
         <h2 class="title centered-text">COMPLETE COMIC COLLECTION</h2>
         <div class="ccc-content">
-            <div class="align-comics">
+            
                 <!-- Using a for...of loop, loop through the data and display each book -->
                 <% for (book of data) { %>
-                    <a href="/books/<%= book._id %>"><img class="comic-cover" src="/images/<%= book.image %>" alt="comic book image"></a>
+                    <div class="align-comics">
+                    <a href="/books/<%= book._id %>"><img class="comic-cover" src="/images/<%= book.image %>" alt="<%= book.title %> comic book cover"></a>
                     <figcaption>
                         <span class="italic"><%= book.title %></span>
                         <span class="center-words">by <%= book.author %></span> 
@@ -25,9 +26,8 @@
                         <% }%></span> 
                         <span class="center-words"><a href="/books/<%= book._id %>">Details</a></span>
                     </figcaption>
+                    </div>
                 <% } %>
-
-            </div>
         </div>
         <div>
                 <input type="button" value="DISPLAY MORE">
