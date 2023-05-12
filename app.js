@@ -15,6 +15,7 @@ app.use(express.json());
 app.use(morgan('combined'));
 app.use('/', routes);
 
+require('./config/connection');
 
 //1. PATH: /, HANDLER: "This route points to the Home page"
 // cut route and pasted in site-routes.js
