@@ -16,7 +16,7 @@ module.exports = {
     // },
     // ability to create a new comic; title, author, publisher
     create_book: (request, response) => {
-            const { _id = uuid(), image, title, author, publisher, genre, pages, rating, synopsis } = request.body;
+            const { image, title, author, publisher, genre, pages, rating, synopsis } = request.body;
             const newComic = new Comic ({
                 image: image,
                 title: title,
@@ -43,16 +43,14 @@ module.exports = {
     //         book: comic
     //     });
     // }
-    update_book: (request, response) => {
+    update_book: async function (request, response) {
         const { _id } = request.params;
-        Comic.findOne({ _id: _id }, (error, comic) => {
-            if (error) {
-                return error;
-            } else {
-                response.render('pages/update', {
-                    book: comic
-                });
-            }
+        await Comic.findOne({ _id: _id }).then(function (comic) {
+            response.render('pages/update', {
+                book: comic
+            })
+        }).catch(function (error) {
+            console.log(error)
         });
     }
 }

@@ -10,17 +10,21 @@ module.exports = {
     //         comic: comic
     //     });
     // },
-    book_detail: (request, response) => {
+    book_detail: async function (request, response) {
         const {_id} = request.params;
-        Comic.findOne({ _id: _id }, (error, comic) => {
-            if (error) {
-                return error;
-            } else {
-                response.render('pages/book', {
-                    comic: comic
-                });
-            }
+        await Comic.findOne({ _id: _id }).then(function (comic) {
+            response.render('pages/book', {
+                comic: comic
+            })
+        }).catch(function (error) {
+            console.log(error)
         });
+
+        // await Comic.findOne({ _id: _id }).then(function (comic) {
+        //     response.render('pages/book', {
+
+        //     })
+        // })
     },
     // create_book: (request, response) => {
     //     console.log(request.body);
@@ -29,7 +33,7 @@ module.exports = {
     //     response.redirect("/admin-console");
     // },
     create_book: (request, response) => {
-        const { _id = uuid(), image, title, author, publisher, genre, pages, rating, synopsis } = request.body;
+        const { image, title, author, publisher, genre, pages, rating, synopsis } = request.body;
         const newComic = new Comic ({
             image: image,
             title: title,
@@ -60,27 +64,28 @@ module.exports = {
     //     comic.synopsis = synopsis;
     //     response.redirect("/admin-console");
     // },
-    update_book: (request, response) => {
-    const {_id} = request.params;
-    
-    const { image, title, author, publisher, genre, pages, rating, synopsis } = request.body;
+    update_book: async function (request, response) {
 
-    Comic.findByIdAndUpdate(_id, {$set: {
-        image: image,
-        title: title,
-        author: author,
-        publisher: publisher,
-        genre: genre,
-        pages: pages,
-        rating: rating,
-        synopsis: synopsis
-        }}, {new: true}, error => {
-        if(error) {
-            return error;
-        } else {
-            response.redirect("/admin-console");
-        }
-        })
+        const { _id } = request.params;
+
+        const { title, author, publisher, genre, number_of_pages, starRating, synopsis, image } = request.body;
+
+        await Comic.findByIdAndUpdate({ _id: _id }, {
+            $set: {
+                title: title,
+                author: author,
+                publisher: publisher,
+                genre: genre,
+                number_of_pages: number_of_pages,
+                starRating: starRating,
+                synopsis: synopsis,
+                image: image
+            }
+        }, { new: true }).then(function () {
+            response.redirect("/admin-console")
+        }).catch(function (error) {
+            console.log(error)
+        });
     },
     // delete_book: (request, response) => {
     //     const { _id } = request.params;
@@ -89,16 +94,16 @@ module.exports = {
     //     data.splice(index, 1);
     //     response.redirect("/admin-console");
     // }
-    delete_book: (request, response) => {
-        const { _id } = request.params;
-        Comic.deleteOne({ _id: _id }, error => {
-            if (error) {
-                return error;
-            } else {
-                response.redirect("/admin-console");
-            }
+    delete_book: async function (request, response) {
+    const { _id } = request.params;
+        await Comic.deleteOne({ _id: _id }).then(function () {
+            response.redirect("/admin-console")
+        }).catch(function (error) {
+            console.log(error)
         });
     }
+
 }
+
 
 
