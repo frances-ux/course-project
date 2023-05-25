@@ -1,5 +1,7 @@
 // const data = require('../data/data');
+const User = require('../models/user-model');
 const Comic = require('../models/comic-model');
+const passport = require('passport');
 
 module.exports = {
     // index: (request, response) => {
@@ -17,7 +19,7 @@ module.exports = {
             })
         }).catch(function (error) {
             console.log(error)
-        }); 
+        });
     },
     about: (request, response) => {
         response.render('pages/about', {
@@ -25,7 +27,58 @@ module.exports = {
     },
     login: (request, response) => {
         response.render('pages/login', {
-            data: data 
+            data: data
         });
-    }
+    },
+    login_post: (request, response) => {
+        const { username, password } = request.body;
+        const user = new User({
+            username: username,
+            password: password
+        });
+        request.login(user, (error) => {
+            if (error) {
+                console.log(error);
+                response.redirect('/login');
+            } else {
+                passport.authenticate('local')(request, response, () => {
+                    response.redirect('/admin-console');
+                });
+            }
+        });
+    },
+    logout: (request, response) => {
+        request.logout(function (err)
+        {if (err) {return next(err);} 
+            response.redirect('/');
+        })
+    },
+    register_get: (request, response) => {
+        response.render('pages/register', {
+            data: data
+        });
+    },
+    register_post: (request, response) => {
+        User.register({ username: request.body.username }, request.body.password, (error, user) => {
+            if (error) {
+                console.log(error);
+                // response.redirect('/register');
+            } else {
+                passport.authenticate('local')(request, response, () => {
+                    response.redirect('/admin-console');
+                    // is this correct? in carols bookstore, we are redirected to the login page
+                });
+            }
+        });
+    },
+    //Adding Google OAuth
+    google_get: passport.authenticate('google', { scope: ['openid', 'profile', 'email'] }),
+    
+    google_redirect_get: [
+        passport.authenticate('google', { failureRedirect: '/login' }),
+        function (request, response) {
+        // Successful authentication, redirect home.
+            response.redirect('/admin-console');
+        }
+    ]
 }

@@ -26,7 +26,23 @@ router.route('/about')
 //     console.log("This route points to the Login page");
 // });
 
+router.route('/register')
+    .get(siteController.register_get)
+    .post(siteController.register_post)
+
 router.route('/login')
-    .get(siteController.login);
+    .get(siteController.login)
+    .post(siteController.login_post)
+
+// Google OAuth
+router.route('/auth/google')
+    .get(siteController.google_get)
+
+router.route('/auth/google/admin')
+    .get(siteController.google_redirect_get)
+
+// ADD A logout route to destroy the session
+router.route('/logout')
+    .get(siteController.logout)
 
 module.exports = router;

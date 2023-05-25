@@ -4,9 +4,11 @@ const { v4: uuid } = require('uuid');
 
 module.exports = {
     admin: (request, response) => {
-        response.render('pages/admin', {
-            data: data
-        });
+        if (request.isAuthenticated()) {
+            response.render('pages/admin', {
+                data: data
+            });
+        }
     },
     // create_book: (request, response) => {
     //     response.render('pages/create', {
@@ -16,8 +18,9 @@ module.exports = {
     // },
     // ability to create a new comic; title, author, publisher
     create_book: (request, response) => {
+        if (request.isAuthenticated()) {
             const { image, title, author, publisher, genre, pages, rating, synopsis } = request.body;
-            const newComic = new Comic ({
+            const newComic = new Comic({
                 image: image,
                 title: title,
                 author: author,
@@ -33,7 +36,8 @@ module.exports = {
             response.render('pages/create', {
                 data: data
             });
-        // unsure about lines 33-35
+            // unsure about lines 33-35
+            }
         },
     // update_book: (request, response) => {
     //     let id = request.params._id;
@@ -44,13 +48,15 @@ module.exports = {
     //     });
     // }
     update_book: async function (request, response) {
-        const { _id } = request.params;
-        await Comic.findOne({ _id: _id }).then(function (comic) {
-            response.render('pages/update', {
-                book: comic
-            })
-        }).catch(function (error) {
-            console.log(error)
-        });
+        if (request.isAuthenticated()) {
+            const { _id } = request.params;
+            await Comic.findOne({ _id: _id }).then(function (comic) {
+                response.render('pages/update', {
+                    book: comic
+                })
+            }).catch(function (error) {
+                console.log(error)
+            });
+        }
     }
 }
