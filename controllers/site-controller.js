@@ -27,7 +27,7 @@ module.exports = {
     },
     login: (request, response) => {
         response.render('pages/login', {
-            data: data
+            // data: data
         });
     },
     login_post: (request, response) => {
@@ -55,7 +55,7 @@ module.exports = {
     },
     register_get: (request, response) => {
         response.render('pages/register', {
-            data: data
+            // data: data
         });
     },
     register_post: (request, response) => {
