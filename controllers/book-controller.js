@@ -35,14 +35,14 @@ module.exports = {
     create_book: (request, response) => {
         const { image, title, author, publisher, genre, pages, rating, synopsis } = request.body;
         const newComic = new Comic ({
-            image: image,
             title: title,
             author: author,
             publisher: publisher,
             genre: genre,
             pages: pages,
             rating: rating,
-            synopsis: synopsis
+            synopsis: synopsis,
+            image: image
         });
 
         newComic.save();

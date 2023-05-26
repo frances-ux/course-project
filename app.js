@@ -17,7 +17,7 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan('combined'));
-app.use('/', routes);
+
 
 app.use(session({
     secret: process.env.SECRET_KEY,
@@ -29,7 +29,9 @@ app.use(passport.initialize());
 
 app.use(passport.session());
 
-app.use(routes);
+app.use('/', routes);
+
+// app.use(routes);
 
 require('./config/connection');
 

@@ -48,10 +48,8 @@ module.exports = {
         });
     },
     logout: (request, response) => {
-        request.logout(function (err)
-        {if (err) {return next(err);} 
-            response.redirect('/');
-        })
+        request.logout();
+        response.redirect('/')
     },
     register_get: (request, response) => {
         response.render('pages/register', {
@@ -59,6 +57,7 @@ module.exports = {
         });
     },
     register_post: (request, response) => {
+        const { username, password } = request.body;
         User.register({ username: request.body.username }, request.body.password, (error, user) => {
             if (error) {
                 console.log(error);
