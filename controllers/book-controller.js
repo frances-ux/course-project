@@ -1,6 +1,6 @@
 // const data = require('../data/data');
 const Comic = require('../models/comic-model');
-const { v4: uuid } = require('uuid');
+
 
 module.exports = {
     // book_detail: (request, response) => {
