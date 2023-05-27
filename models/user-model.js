@@ -39,7 +39,7 @@ passport.deserializeUser(function (user, cb) {
 passport.use(new GoogleStrategy({
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
-        callbackURL: "https://uptight-gray-tadpole.cyclic.app/auth/google/admin",
+        callbackURL: "https://uptight-gray-tadpole.cyclic.app/auth/google/admin-console",
     },
     function(accessToken, refreshToken, email, cb) {
         User.findOrCreate({ googleId: email.id }, function (err, user) {
