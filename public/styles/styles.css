@@ -312,6 +312,7 @@ font-size: 1.4rem;
     margin-left: 20%;
 }
 
+
 .login-container {
     max-width: 80%;
     margin: 4% auto;
@@ -326,8 +327,12 @@ font-size: 1.4rem;
     justify-content: center;
     align-items: center;
     margin: auto;
-    text-align: end;
+    text-align: start;
     padding: 4%;
+}
+
+.form-width {
+    width: 30vw;
 }
 
 .cc-container {
@@ -448,7 +453,6 @@ label[for=synopsis] {
     vertical-align: top;
 }
 
-
 label {
     font-size: 0.85em;
 }
@@ -478,6 +482,20 @@ input[type=submit] {
     margin: 0 auto;
     text-align: center;
     padding: 0.25rem 0.25rem;
+}
+
+.google {
+    background-color: var(--yellow);
+    color: var(--blue);
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.25rem 0.25rem;
+    margin-top: 2%;
+}
+
+.google a:visited {
+    color: var(--blue);
 }
 
 input[type=button] {

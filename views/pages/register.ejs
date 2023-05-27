@@ -6,20 +6,22 @@
         <div class="login-content">
             <h1 class="title centered-text">REGISTER</h1>
             <form action="/register" method="POST">
-                <div>
-                    <label for="email">Email address:</label>
-                    <input type="username" name="username" id="username" placeholder="Username" required>
-                </div>
-            
-                <div>
-                    <label for="password">Password:</label>
-                    <input type="text" name="password" id="password" placeholder="Password" minlength="10" required>
+                <div class="form-width">
+                    <div>
+                        <label for="username">Username:</label>
+                        <input type="username" name="username" id="username" placeholder="Username" required>
+                    </div>
+                
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="text" name="password" id="password" placeholder="Password" minlength="10" required>
+                    </div>
                 </div>
             </form>
             <div>
                     <input type="submit" value="Submit">
             </div>
-            <button>
+            <button class="google">
                 <a href="/auth/google" role="button">Sign Up with Google</a>
             </button>
         </div>
