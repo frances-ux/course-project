@@ -5,7 +5,7 @@
     <div class="update-container">
         <div class="update-content">
             <h1 class="title centered-text">UPDATE COMIC</h1>
-            <form action="/books/<%= book._id%>?_method=PUT" method="POST">
+            <form action="/books/<%= book._id%>?_method=PUT" method="POST" enctype="application/x-www-form-urlencoded">
                 <div>
                     <label for="comicImage">Comic Image:</label>
                     <input type="text" name="comicImage" id="comicImage" value="<%= book.image %>">
