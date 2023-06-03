@@ -64,7 +64,7 @@ module.exports = {
                 // response.redirect('/register');
             } else {
                 passport.authenticate('local')(request, response, () => {
-                    response.redirect('/admin-console');
+                    response.redirect('/login');
                     // is this correct? in carols bookstore, we are redirected to the login page
                 });
             }
