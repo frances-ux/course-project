@@ -5,12 +5,12 @@ const comicSchema = new Schema({
     title: {
         type: String,
         required: [true, 'A title name is required.'],
-        minlength:[1,'Minimun length for the title name is 1 character.']
+        minlength:[1,'Minimum length for the title name is 1 character.']
     },
     author: {
         type: String,
         required: [true, 'The author\'s name is required.'],
-        minlength:[2,'Minimun length for the author\'s name is 2 characters.']
+        minlength:[2,'Minimum length for the author\'s name is 2 characters.']
     },
     publisher: {
         type: String
@@ -24,7 +24,7 @@ const comicSchema = new Schema({
     rating: {
         type: Number,
         required: [true, 'The star rating is required.'],
-        min: [1, 'Minimun number of star rating is 1'],
+        min: [1, 'Minimum number of star rating is 1'],
         max: [5, 'Maximum number of star rating is 5']
     },
     synopsis: {

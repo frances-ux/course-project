@@ -7,6 +7,10 @@
             <h1 class="title centered-text">CREATE NEW COMIC</h1>
             <form action="/books/" method="POST">
                 <div>
+                    <label for="comicImage">Comic Image:</label>
+                    <input type="text" name="comicImage" id="comicImage" value="<%= book.image %>">
+                </div>
+                <div>
                     <label for="title">Title:</label>
                     <input type="text" name="title" id="title" placeholder="Title" minlength="1" required>
                 </div>

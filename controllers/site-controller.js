@@ -58,6 +58,7 @@ module.exports = {
     },
     register_post: (request, response) => {
         const { username, password } = request.body;
+        // line 60 may need to be commented out for this to work. 
         User.register({ username: request.body.username }, request.body.password, (error, user) => {
             if (error) {
                 console.log(error);

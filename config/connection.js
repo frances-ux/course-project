@@ -14,7 +14,7 @@ const mongoose = require('mongoose');
 main().catch(err => console.log(err))
 
 async function main() {
-    await mongoose.connect('mongodb+srv://francesmarquez94:aynFa23L1fu8CBoh@cluster1.s01nuoo.mongodb.net/codesquadComics?retryWrites=true&w=majority')
+    await mongoose.connect(process.env.DB_URL)
 }
 // need help refactoring the code above  
 

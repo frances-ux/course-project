@@ -78,4 +78,5 @@ module.exports = {
             });
         }
     }
+    // render page with data I need - get method 
 }

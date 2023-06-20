@@ -64,6 +64,8 @@ module.exports = {
     //     comic.synopsis = synopsis;
     //     response.redirect("/admin-console");
     // },
+
+    // PUT method - this actually sends the updated data 
     update_book: async function (request, response) {
 
         const { _id } = request.params;
@@ -87,6 +89,7 @@ module.exports = {
             console.log(error)
         });
     },
+    
     // delete_book: (request, response) => {
     //     const { _id } = request.params;
     //     const comic = data.find(book => book._id === String(_id));
